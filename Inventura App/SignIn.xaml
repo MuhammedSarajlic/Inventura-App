@@ -38,8 +38,8 @@
                Grid.Row="1"
                VerticalOptions="CenterAndExpand"
                Margin="0,0,40,0">
-
-            <VerticalStackLayout Spacing="25">
+            <ScrollView>
+                <VerticalStackLayout Spacing="25">
                 <Label TextColor="Black" Text="SIGN IN" FontSize="28" FontAttributes="Bold"/>
                 <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
                     <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
@@ -55,7 +55,7 @@
 
                 <Button CornerRadius="0" HeightRequest="60" Text="Sign in" FontSize="20" FontAttributes="Bold"/>
                 <Label FontAttributes="Bold" Text="Forgot Password?" TextColor="Gray" HorizontalTextAlignment="Center"/>
-                <HorizontalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                     <Label Text="Don't have an account? " VerticalTextAlignment="Center" TextColor="Gray"/>
                     <Label Text="SIGN UP" FontSize="18" FontAttributes="Bold"
                            TextColor="{x:StaticResource Primary}"/>
@@ -65,9 +65,9 @@
                     </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
-           
-            
-            
+
+            </ScrollView>
+
         </Frame>
         
         <Frame BackgroundColor="{x:StaticResource Primary}"

@@ -33,50 +33,50 @@
                CornerRadius="125">
         </Frame>
 
-        <Frame CornerRadius="0" BackgroundColor="{x:StaticResource DasboardBackground}"
+        <Frame ZIndex="1" CornerRadius="0" BackgroundColor="{x:StaticResource DasboardBackground}"
                Grid.Row="1"
                VerticalOptions="CenterAndExpand"
                Margin="0,0,40,0">
+            <ScrollView>
+                <VerticalStackLayout Spacing="25">
+                    <Label TextColor="Black" Text="SIGN IN" FontSize="28" FontAttributes="Bold"/>
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" Placeholder="Name"  Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
 
-            <VerticalStackLayout Spacing="25">
-                <Label TextColor="Black" Text="SIGN IN" FontSize="28" FontAttributes="Bold"/>
-                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
-                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
-                        <Entry VerticalOptions="Center" Placeholder="Name"  Grid.Column="1"/>
-                    </Grid>
-                </Frame>
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" Placeholder="Email"  Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
 
-                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
-                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
-                        <Entry VerticalOptions="Center" Placeholder="Email"  Grid.Column="1"/>
-                    </Grid>
-                </Frame>
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" Placeholder="Mobile Number"  Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
 
-                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
-                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
-                        <Entry VerticalOptions="Center" Placeholder="Mobile Number"  Grid.Column="1"/>
-                    </Grid>
-                </Frame>
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
 
-                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
 
-                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
-                        <Entry VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1"/>
-                    </Grid>
-                </Frame>
-
-                <Button CornerRadius="0" HeightRequest="60" Text="Sign Up" FontSize="20" FontAttributes="Bold"/>
-                <Label FontAttributes="Bold" Text="Forgot Password?" TextColor="Gray" HorizontalTextAlignment="Center"/>
-                <HorizontalStackLayout Spacing="10">
-                    <Label Text="already have an account? " VerticalTextAlignment="Center" TextColor="Gray"/>
-                    <Label Text="SIGN IN" FontSize="18" FontAttributes="Bold"
+                    <Button CornerRadius="0" HeightRequest="60" Text="Sign Up" FontSize="20" FontAttributes="Bold"/>
+                    <Label FontAttributes="Bold" Text="Forgot Password?" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="already have an account? " VerticalTextAlignment="Center" TextColor="Gray"/>
+                        <Label Text="SIGN IN" FontSize="18" FontAttributes="Bold"
                            TextColor="{x:StaticResource Primary}"/>
-                    <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn"/>
-                    </HorizontalStackLayout.GestureRecognizers>
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
-
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
 
 
         </Frame>
