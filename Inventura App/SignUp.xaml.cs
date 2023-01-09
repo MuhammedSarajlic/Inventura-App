@@ -10,4 +10,5 @@ public partial class SignUp : ContentPage
     {
 		await Shell.Current.GoToAsync("//SignIn");
     }
+
 }

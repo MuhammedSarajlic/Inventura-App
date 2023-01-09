@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\logosvg.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="SignIn.xaml.cs">
 	    <DependentUpon>SignIn.xaml</DependentUpon>
 	  </Compile>
