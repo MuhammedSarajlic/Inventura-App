@@ -1,8 +1,8 @@
 namespace Inventura_App
 {
-    public partial class SingIn : ContentPage
+    public partial class SignIn : ContentPage
     {
-        public SingIn()
+        public SignIn()
         {
             InitializeComponent();
         }
