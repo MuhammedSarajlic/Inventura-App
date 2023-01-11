@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Inventura_App.Data;
 using SQLite;
+using System.IO;
+
 
 namespace Inventura_App.Models
 {
@@ -12,8 +15,9 @@ namespace Inventura_App.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        [MaxLength(50)]
         public string Name { get; set; }
-        [MaxLength(250), Unique]
+        [Unique]
         public string Email { get; set; }
         public string Password { get; set; }
 

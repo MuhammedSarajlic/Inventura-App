@@ -8,7 +8,7 @@ namespace Inventura_App.Data
 {
     internal class Database
     {
-        public const string DatabaseFilename = "user.db3";
+        public const string DatabaseFilename = "Inventura_App.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
             SQLite.SQLiteOpenFlags.ReadWrite |

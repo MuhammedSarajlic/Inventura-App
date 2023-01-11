@@ -1,14 +1,61 @@
-namespace Inventura_App;
+using Inventura_App.Data;
+using Inventura_App.Models;
+using SQLite;
 
-public partial class SignUp : ContentPage
+namespace Inventura_App
 {
-	public SignUp()
-	{
-		InitializeComponent();
-	}
-    private async void TapGestureRecognizer_Tapped_For_SignIn(object sender, EventArgs e)
+    public partial class SignUp : ContentPage
     {
-		await Shell.Current.GoToAsync("//SignIn");
-    }
+        private SQLiteAsyncConnection _connection;
+        public SignUp()
+        {
+            InitializeComponent();
+            
+            _connection = new SQLiteAsyncConnection(Data.Database.DatabasePath, Data.Database.Flags);
+            _connection.CreateTableAsync<User>();
+            SignUpButton.Clicked += SignUpButton_Clicked;
+        }
 
+        private async void SignUpButton_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var query = _connection.Table<User>().Where(u => u.Email == EmailEntry.Text);
+                var user = await query.FirstOrDefaultAsync();
+                if (user != null)
+                {
+                    //user already exists in the database
+                    await DisplayAlert("Error", "User with this email already exists!", "Ok");
+                    return;
+                }
+                else
+                {
+                    //user does not exist in the database
+                    var newUser = new User
+                    {
+                        Name = NameEntry.Text,
+                        Email = EmailEntry.Text,
+                        Password = PasswordEntry.Text
+                    };
+
+                    await _connection.InsertAsync(newUser);
+                    await DisplayAlert("Success", "User successfully added to the database!", "Ok");
+                }
+                await Shell.Current.GoToAsync("//SignIn");
+            }
+            catch (DllNotFoundException ex)
+            {
+                // handle the exception here
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+
+        }
+
+
+        private async void TapGestureRecognizer_Tapped_For_SignIn(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//SignIn");
+        }
+    }
 }
