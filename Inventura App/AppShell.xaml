@@ -7,10 +7,13 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
+        Title="WelcomePage"
+        ContentTemplate="{DataTemplate local:WelcomePage}"
+        Route="WelcomePage" />
+    <ShellContent
         Title="SignIn"
         ContentTemplate="{DataTemplate local:SignIn}"
         Route="SignIn" />
-
     <ShellContent
         Title="SignUp"
         ContentTemplate="{DataTemplate local:SignUp}"
