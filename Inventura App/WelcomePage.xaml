@@ -4,18 +4,27 @@
              x:Class="Inventura_App.WelcomePage"
              Title="WelcomePage"
              Shell.NavBarIsVisible="False">
-    <CarouselView ItemsSource="{Binding WelcomeMessages}">
-        <CarouselView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout VerticalOptions="StartAndExpand" Spacing="70" Margin="20, 50">
-                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Title" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-                    <Image Source="{Binding Photo}" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <StackLayout Spacing="10">
-                        <Label Text="{Binding Subtitle}" FontAttributes="Bold" FontSize="Subtitle" HorizontalOptions="Center"/>
-                        <Label Text="{Binding Paragraph}" HorizontalOptions="Center"/>
+    <StackLayout>
+        <CarouselView ItemsSource="{Binding WelcomeMessages}"
+                      IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout VerticalOptions="StartAndExpand" Spacing="70" Margin="20, 50">
+                        <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Title" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                        <Image Source="{Binding Photo}" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <StackLayout Spacing="10">
+                            <Label Text="{Binding Subtitle}" FontAttributes="Bold" FontSize="Subtitle" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Paragraph}" HorizontalOptions="Center"/>
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
-            </DataTemplate>
-        </CarouselView.ItemTemplate>
-    </CarouselView>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                       Grid.Row="1" 
+                       SelectedIndicatorColor="Black"
+                       IndicatorColor="LightGray"
+                       IndicatorSize="10"
+                       HorizontalOptions="Center"/>
+    </StackLayout>
 </ContentPage>

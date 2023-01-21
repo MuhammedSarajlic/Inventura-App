@@ -11,8 +11,11 @@ public partial class WelcomePage : ContentPage
     }
 
     public List<WelcomeMessage> WelcomeMessages { get; set; }
+    public int CurrentPage { get; set; }
+
     public WelcomePage()
 	{
+        CurrentPage = 0;
         WelcomeMessages = new List<WelcomeMessage>()
         {
             new WelcomeMessage { Title = "Welcome to Stock Management", Photo = "welcome1.png", Subtitle = "Streamline your inventory", Paragraph = "Get started today" },
@@ -22,4 +25,6 @@ public partial class WelcomePage : ContentPage
         this.BindingContext = this;
         InitializeComponent();
     }
+
+
 }
