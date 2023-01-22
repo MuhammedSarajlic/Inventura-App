@@ -24,7 +24,6 @@ namespace Inventura_App
                     if (user.Password == PasswordEntry.Text)
                     {
                         // User exists in the database and the password is correct
-                        await DisplayAlert("Success", "Successfully signed in!", "Ok");
                         await Shell.Current.GoToAsync("//MainPage");
                     }
                     else

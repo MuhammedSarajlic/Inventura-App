@@ -19,7 +19,7 @@
                                     <Label Text="{Binding Subtitle}" FontAttributes="Bold" FontSize="Subtitle" HorizontalOptions="Center"/>
                                     <Label Text="{Binding Paragraph}" HorizontalOptions="Center"/>
                                 </StackLayout>
-                                <Button IsVisible="{Binding Visible}" Text="Get Started" CornerRadius="40" Margin="20, 0" HeightRequest="55" FontSize="Medium"/>
+                                <Button IsVisible="{Binding Visible}" Text="Get Started" CornerRadius="40" Margin="20, 0" HeightRequest="55" FontSize="Medium" Clicked="Button_Clicked"/>
                             </StackLayout>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
