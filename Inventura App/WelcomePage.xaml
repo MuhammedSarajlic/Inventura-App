@@ -4,27 +4,38 @@
              x:Class="Inventura_App.WelcomePage"
              Title="WelcomePage"
              Shell.NavBarIsVisible="False">
-    <StackLayout>
-        <CarouselView ItemsSource="{Binding WelcomeMessages}"
-                      IndicatorView="indicatorView">
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout VerticalOptions="StartAndExpand" Spacing="70" Margin="20, 50">
-                        <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Title" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-                        <Image Source="{Binding Photo}" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
-                        <StackLayout Spacing="10">
-                            <Label Text="{Binding Subtitle}" FontAttributes="Bold" FontSize="Subtitle" HorizontalOptions="Center"/>
-                            <Label Text="{Binding Paragraph}" HorizontalOptions="Center"/>
-                        </StackLayout>
-                    </StackLayout>
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
-        <IndicatorView x:Name="indicatorView"
-                       Grid.Row="1" 
-                       SelectedIndicatorColor="Black"
-                       IndicatorColor="LightGray"
-                       IndicatorSize="10"
-                       HorizontalOptions="Center"/>
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Frame>
+                <CarouselView Grid.Row="0"
+                              ItemsSource="{Binding WelcomeMessages}"
+                              IndicatorView="indicatorView">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Spacing="45" Margin="0, 50, 0, 0" VerticalOptions="StartAndExpand" HeightRequest="600">
+                                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Title" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                <Image Source="{Binding Photo}" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <StackLayout Spacing="10">
+                                    <Label Text="{Binding Subtitle}" FontAttributes="Bold" FontSize="Subtitle" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Paragraph}" HorizontalOptions="Center"/>
+                                </StackLayout>
+                                <Button IsVisible="{Binding Visible}" Text="Get Started" CornerRadius="40" Margin="20, 0" HeightRequest="55" FontSize="Medium"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </Frame>
+        </StackLayout>
+        <StackLayout VerticalOptions="End"
+                     HeightRequest="10"
+                     Grid.Row="1"
+                     Margin="0, 0, 0, 20">
+            <IndicatorView x:Name="indicatorView"
+                    Grid.Row="1"
+                    SelectedIndicatorColor="Black"
+                    IndicatorColor="LightGray"
+                    IndicatorSize="10"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
