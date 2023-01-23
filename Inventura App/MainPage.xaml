@@ -19,5 +19,5 @@
             <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
         </Tab>
     </TabBar>
-
+    
 </Shell>

@@ -4,10 +4,20 @@
              x:Class="Inventura_App.HomePage"
              Title="HomePage"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <Label 
-            Text="Home page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView Margin="30, 30">
+        <StackLayout Spacing="30">
+            <HorizontalStackLayout Spacing="120">
+                <Label Text="Dashboard" FontSize="Title" FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Frame BackgroundColor="{x:StaticResource Primary}">
+                    <StackLayout Spacing="10">
+                        <Label Text="Total products" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                        <Label Text="213" TextColor="White" FontSize="Large"/>
+                    </StackLayout>
+                </Frame>
+            </HorizontalStackLayout>
+        </StackLayout>
+
+    </ScrollView>
 </ContentPage>
