@@ -6,7 +6,7 @@
              Shell.NavBarIsVisible="False">
     <ScrollView Margin="30">
         <StackLayout Spacing="30">
-            <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Margin="0, 10, 0, 20">
+            <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Margin="0, 10, 0, 0">
                 <Label Text="Dashboard" FontSize="Title" FontAttributes="Bold"/>
                 <Image Source="logosvg.svg" Aspect="Fill" HeightRequest="70"/>
             </FlexLayout>
@@ -30,6 +30,37 @@
                     <Button Text="Car" BackgroundColor="Transparent" TextColor="Black" BorderColor="Black" BorderWidth="2" HeightRequest="45" CornerRadius="10"/>
                 </HorizontalStackLayout>
             </StackLayout>
+            <HorizontalStackLayout>
+                <StackLayout Spacing="25" Margin="0, 0, 7, 0">
+                    <Label Text="25" />
+                    <Label Text="20" />
+                    <Label Text="15" />
+                    <Label Text="10" />
+                    <Label Text="0" />
+                </StackLayout>
+                <StackLayout>
+                    <Frame HeightRequest="200" Margin="0" Padding="0">
+                        <HorizontalStackLayout Spacing="5">
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="100" VerticalOptions="End"></Frame>
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="150" VerticalOptions="End"></Frame>
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="70" VerticalOptions="End"></Frame>
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="160" VerticalOptions="End"></Frame>
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="130" VerticalOptions="End"></Frame>
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="100" VerticalOptions="End"></Frame>
+                            <Frame WidthRequest="35" BackgroundColor="{x:StaticResource Primary}" HeightRequest="170" VerticalOptions="End"></Frame>
+                        </HorizontalStackLayout>
+                    </Frame>
+                    <HorizontalStackLayout Spacing="30" Margin="12, 10, 0, 0">
+                        <Label Text="M" />
+                        <Label Text="T" />
+                        <Label Text="W" />
+                        <Label Text="T" />
+                        <Label Text="F" Margin="2,0,0,0"/>
+                        <Label Text="S" Margin="0,0,2,0"/>
+                        <Label Text="S" />
+                    </HorizontalStackLayout>
+                </StackLayout>
+            </HorizontalStackLayout>
         </StackLayout>
 
     </ScrollView>
