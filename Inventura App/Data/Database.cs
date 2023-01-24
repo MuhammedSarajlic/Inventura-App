@@ -17,4 +17,5 @@ namespace Inventura_App.Data
 
         public static string DatabasePath => Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
     }
+
 }

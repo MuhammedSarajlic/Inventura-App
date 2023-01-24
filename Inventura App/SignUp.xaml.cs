@@ -12,7 +12,6 @@ namespace Inventura_App
             InitializeComponent();
             
             _connection = new SQLiteAsyncConnection(Data.Database.DatabasePath, Data.Database.Flags);
-            _connection.CreateTableAsync<User>();
             SignUpButton.Clicked += SignUpButton_Clicked;
         }
 
@@ -45,13 +44,11 @@ namespace Inventura_App
             }
             catch (DllNotFoundException ex)
             {
-                // handle the exception here
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
             }
 
         }
-
 
         private async void TapGestureRecognizer_Tapped_For_SignIn(object sender, EventArgs e)
         {
