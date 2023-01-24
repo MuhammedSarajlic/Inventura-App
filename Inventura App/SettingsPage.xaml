@@ -4,10 +4,32 @@
              x:Class="Inventura_App.SettingsPage"
              Title="SettingsPage"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <Label 
-            Text="Settings"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout Padding="20, 10">
+        <StackLayout Spacing="20">
+            <Label Text="Settings" FontSize="Large" FontAttributes="Bold" Margin="0,20"/>
+            <StackLayout Spacing="10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ProfilePage_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                <Label Text="Profile" FontSize="Medium" VerticalOptions="Center" />
+                <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <StackLayout Spacing="10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="EditProfilePage_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                <Label Text="Edit Profile" FontSize="Medium" VerticalOptions="Center" />
+                <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <StackLayout Spacing="10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LogOut_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                <Label Text="Logout" FontSize="Medium" VerticalOptions="Center" />
+                <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+
 </ContentPage>

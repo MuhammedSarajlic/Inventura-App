@@ -12,9 +12,6 @@
         <Tab Title="Products" Icon="product_icon.svg">
             <ShellContent ContentTemplate="{DataTemplate local:ProductsPage}" />
         </Tab>
-        <Tab Title="History" Icon="chart_icon.svg">
-            <ShellContent ContentTemplate="{DataTemplate local:HistoryPage}" />
-        </Tab>
         <Tab Title="Settings" Icon="settings_icon.svg">
             <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
         </Tab>

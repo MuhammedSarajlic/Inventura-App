@@ -25,6 +25,8 @@ namespace Inventura_App
                     {
                         // User exists in the database and the password is correct
                         await Shell.Current.GoToAsync("//MainPage");
+                        PasswordEntry.Text = "";
+                        EmailEntry.Text = "";
                     }
                     else
                     {
