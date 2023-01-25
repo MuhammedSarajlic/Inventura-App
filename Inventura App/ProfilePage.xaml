@@ -3,10 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Inventura_App.ProfilePage"
              Title="ProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Profile Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="30">
+        <StackLayout VerticalOptions="Center" Spacing="30">
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="20">
+                <StackLayout>
+                    <StackLayout Spacing="30" VerticalOptions="Center">
+                        <Frame CornerRadius="100" HeightRequest="100" WidthRequest="100" >
+                            <StackLayout>
+                                <Image Source="user_icon.svg" Aspect="AspectFill"  HeightRequest="100" WidthRequest="100" />
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Spacing="10">
+                            <Label x:Name="nameLabel" Text="{Binding Name}" FontSize="Medium" />
+                            <Label x:Name="emailLabel" Text="{Binding Email}" FontSize="Medium" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
