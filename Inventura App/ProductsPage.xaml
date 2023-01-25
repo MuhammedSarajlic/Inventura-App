@@ -6,34 +6,54 @@
              Shell.NavBarIsVisible="False">
     <ScrollView Padding="30">
         <StackLayout Spacing="30">
-            <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Margin="0, 10, 0, 0">
-                <Label Text="Products" FontSize="Title" FontAttributes="Bold"/>
-                <Button Text="+" FontSize="Large" CornerRadius="30" HeightRequest="55" WidthRequest="55" TextColor="Black"/>
-            </FlexLayout>
+            <Grid Margin="0, 10, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Products" FontSize="Title" FontAttributes="Bold" Grid.Column="0" VerticalOptions="Center"/>
+                <Button Text="+" FontSize="Large" CornerRadius="30" BackgroundColor="Gray" HeightRequest="50" WidthRequest="50" TextColor="White" Grid.Column="1" VerticalOptions="Center" Clicked="Button_Clicked"/>
+            </Grid>
             <HorizontalStackLayout>
                 <StackLayout Spacing="10">
                     <Label Text="Total products" TextColor="Gray" FontSize="Small"/>
-                    <Label Text="198" TextColor="Black" FontSize="Large"/>
+                    <Label x:Name="totalProducts" Text="{Binding numberOfProducts}" TextColor="Black" FontSize="Large"/>
                 </StackLayout>
-
-                <!--<Frame BackgroundColor="{x:StaticResource Primary}">
-                    <StackLayout Spacing="20"  WidthRequest="140" HeightRequest="100">
-                        <Label Text="Stock in hand" TextColor="White"  FontSize="Small"/>
-                        <Label Text="2350" TextColor="White" FontSize="Large"/>
-                    </StackLayout>
-                </Frame>-->
             </HorizontalStackLayout>
             <StackLayout>
                 <Label Text="Products List" TextColor="Gray"  FontSize="Small"/>
             </StackLayout>
-            <!--<StackLayout Margin="10">
-                <Button Text="Product 1 - Available: 10" Margin="5" WidthRequest="370" HeightRequest="70" BackgroundColor="Gray" TextColor="White"/>
-                <Button Text="Product 2 - Available: 5"  Margin="5" WidthRequest="370" HeightRequest="70" BackgroundColor="Gray" TextColor="White"/>
-                <Button Text="Product 3 - Available: 20" Margin="5" WidthRequest="370" HeightRequest="70" BackgroundColor="Gray" TextColor="White"/>
-                <Button Text="Product 4 - Available: 15" Margin="5" WidthRequest="370" HeightRequest="70" BackgroundColor="Gray" TextColor="White"/>
-                <Button Text="Product 5 - Available: 8"  Margin="5" WidthRequest="370" HeightRequest="70" BackgroundColor="Gray" TextColor="White"/>
-            </StackLayout>-->
-            <Frame>
+            <StackLayout>
+                <ListView x:Name="productListView" ItemsSource="{Binding Products}" HasUnevenRows="True" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="0,10">
+                                    <Frame BorderColor="Gray">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="8*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Spacing="10" Grid.Column="0">
+                                                <Label Text="{Binding Name}" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                <HorizontalStackLayout>
+                                                    <Label Text="Category: " TextColor="Black"/>
+                                                    <Label Text="{Binding Category}" />
+                                                </HorizontalStackLayout>
+                                            </StackLayout>
+                                            <Image Source="next_icon.svg" HeightRequest="40" WidthRequest="40" Grid.Column="1" />
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <!--<Frame>
                 <HorizontalStackLayout Spacing="185">
                     <StackLayout>
                         <Label Text="Golf" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
@@ -68,7 +88,7 @@
                     </StackLayout>
                     <Image Source="next_icon.svg"/>
                 </HorizontalStackLayout>
-            </Frame>
+            </Frame>-->
         </StackLayout>
     </ScrollView>
 </ContentPage>
