@@ -18,13 +18,13 @@
                 <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Column="0">
                     <StackLayout Spacing="10">
                         <Label Text="Total products" TextColor="White" FontAttributes="Bold" FontSize="Small"/>
-                        <Label Text="63" TextColor="White" FontSize="Large"/>
+                        <Label x:Name="totalProducts" Text="{Binding TotalProducts}" TextColor="White" FontSize="Large"/>
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Column="1">
                     <StackLayout Spacing="10">
                         <Label Text="Items in stock" TextColor="White" FontAttributes="Bold" FontSize="Small"/>
-                        <Label Text="542" TextColor="White" FontSize="Large"/>
+                        <Label x:Name="itemsInStock" Text="{Binding ItemsInStock}" TextColor="White" FontSize="Large"/>
                     </StackLayout>
                 </Frame>
             </Grid>
