@@ -13,7 +13,7 @@
             <HorizontalStackLayout>
                 <StackLayout Spacing="10">
                     <Label Text="Total products" TextColor="Gray" FontSize="Small"/>
-                    <Label Text="198" TextColor="Gray" FontSize="Large"/>
+                    <Label Text="198" TextColor="Black" FontSize="Large"/>
                 </StackLayout>
 
                 <!--<Frame BackgroundColor="{x:StaticResource Primary}">
