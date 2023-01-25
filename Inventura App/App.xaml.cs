@@ -19,6 +19,7 @@ public partial class App : Application
         using (var conn = new SQLiteConnection(Database.DatabasePath, Database.Flags))
         {
             conn.CreateTable<User>();
+            conn.CreateTable<Product>();
         }
     }
 }
