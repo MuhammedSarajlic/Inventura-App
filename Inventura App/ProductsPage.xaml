@@ -46,49 +46,11 @@
                                         </Grid>
                                     </Frame>
                                 </StackLayout>
-
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-
-            <!--<Frame>
-                <HorizontalStackLayout Spacing="185">
-                    <StackLayout>
-                        <Label Text="Golf" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
-                        <Label Text="Categori: Car" TextColor="Black"/>
-                    </StackLayout>
-                    <Image Source="next_icon.svg"/>
-                </HorizontalStackLayout>
-            </Frame>
-            <Frame>
-                <HorizontalStackLayout Spacing="185">
-                    <StackLayout>
-                        <Label Text="Golf" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
-                        <Label Text="Categori: Car" TextColor="Black"/>
-                    </StackLayout>
-                    <Image Source="next_icon.svg"/>
-                </HorizontalStackLayout>
-            </Frame>
-            <Frame>
-                <HorizontalStackLayout Spacing="185">
-                    <StackLayout>
-                        <Label Text="Golf" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
-                        <Label Text="Categori: Car" TextColor="Black"/>
-                    </StackLayout>
-                    <Image Source="next_icon.svg"/>
-                </HorizontalStackLayout>
-            </Frame>
-            <Frame>
-                <HorizontalStackLayout Spacing="185">
-                    <StackLayout>
-                        <Label Text="Golf" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
-                        <Label Text="Categori: Car" TextColor="Black"/>
-                    </StackLayout>
-                    <Image Source="next_icon.svg"/>
-                </HorizontalStackLayout>
-            </Frame>-->
         </StackLayout>
     </ScrollView>
 </ContentPage>
