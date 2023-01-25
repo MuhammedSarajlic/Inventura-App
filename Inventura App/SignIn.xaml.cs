@@ -1,4 +1,5 @@
 using Inventura_App.Models;
+using Inventura_App.Data;
 using SQLite;
 
 namespace Inventura_App
@@ -25,6 +26,7 @@ namespace Inventura_App
                     {
                         // User exists in the database and the password is correct
                         await Shell.Current.GoToAsync("//MainPage");
+                        UserCred.Email = EmailEntry.Text;
                         PasswordEntry.Text = "";
                         EmailEntry.Text = "";
                     }
