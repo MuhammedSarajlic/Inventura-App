@@ -1,6 +1,7 @@
 using Inventura_App.Models;
 using SQLite;
 using System.Collections.ObjectModel;
+using Inventura_App.Data;
 
 namespace Inventura_App;
 
@@ -31,7 +32,7 @@ public partial class ProductsPage : ContentPage
 
     }
 
-    private async void OnSearchButtonPressed(object sender, EventArgs e)
+    private void OnSearchButtonPressed(object sender, EventArgs e)
     {
         var searchText = searchBar.Text;
         if (string.IsNullOrWhiteSpace(searchText))
@@ -49,4 +50,23 @@ public partial class ProductsPage : ContentPage
         Navigation.PushAsync(new AddProductPage());
     }
 
+
+    public async void productListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var product = ((ListView)sender).SelectedItem as Product;
+        if(product == null)
+        {
+            return;
+        }
+        else
+        {
+            ProductItem.SelectedProduct = product;
+            await Navigation.PushAsync(new ProductDetailsPage());
+        }
+    }
+
+    private void productListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        ((ListView)sender).SelectedItem = null;
+    }
 }
