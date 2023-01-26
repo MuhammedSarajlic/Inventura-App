@@ -15,13 +15,13 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Column="0">
+                <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Column="0" CornerRadius="15">
                     <StackLayout Spacing="10">
                         <Label Text="Total products" TextColor="White" FontAttributes="Bold" FontSize="Small"/>
                         <Label x:Name="totalProducts" Text="{Binding TotalProducts}" TextColor="White" FontSize="Large"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Column="1">
+                <Frame BackgroundColor="#01B2EA" Grid.Column="1" CornerRadius="15">
                     <StackLayout Spacing="10">
                         <Label Text="Items in stock" TextColor="White" FontAttributes="Bold" FontSize="Small"/>
                         <Label x:Name="itemsInStock" Text="{Binding ItemsInStock}" TextColor="White" FontSize="Large"/>
