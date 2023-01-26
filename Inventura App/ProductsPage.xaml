@@ -29,7 +29,7 @@
                 <SearchBar x:Name="searchBar" SearchButtonPressed="OnSearchButtonPressed" VerticalOptions="Center" WidthRequest="200" Grid.Column="1"  />
             </Grid>
             <StackLayout>
-                <ListView x:Name="productListView" ItemsSource="{Binding Products}" HasUnevenRows="True" SeparatorVisibility="None" ItemSelected="productListView_ItemSelected" ItemTapped="productListView_ItemTapped">
+                <ListView x:Name="productListView" ItemsSource="{Binding Products}" VerticalScrollBarVisibility="Never" HasUnevenRows="True" SeparatorVisibility="None" ItemSelected="productListView_ItemSelected" ItemTapped="productListView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
