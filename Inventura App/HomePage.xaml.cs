@@ -24,7 +24,7 @@ public partial class HomePage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        var count = await _connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM products");
+        var count = await _connection.ExecuteScalarAsync<int>("SELECT SUM(quantity) FROM products");
         var uniqueCount = await _connection.ExecuteScalarAsync<int>("SELECT COUNT(DISTINCT name) FROM products");
         TotalProducts = uniqueCount;
         ItemsInStock = count;

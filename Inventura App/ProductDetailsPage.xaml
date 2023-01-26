@@ -29,6 +29,10 @@
                         <Label Text="{Binding Description}" FontSize="Subtitle" VerticalOptions="Center" />
                     </StackLayout>
                     <StackLayout Spacing="5">
+                        <Label Text="Quantity" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label Text="{Binding Quantity}" FontSize="Subtitle" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Spacing="5">
                         <Label Text="Date of Purchase" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="{Binding Date}" FontSize="Subtitle" VerticalOptions="Center"/>
                     </StackLayout>

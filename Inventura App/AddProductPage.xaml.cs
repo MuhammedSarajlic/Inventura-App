@@ -25,6 +25,7 @@ public partial class AddProductPage : ContentPage
                 Category = categoryEntry.Text,
                 Location = locationEntry.Text,
                 Description = descriptionEntry.Text,
+                Quantity = int.Parse(quantityEntry.Text),
                 Date = dateEntry.Text
             };
 
@@ -35,6 +36,7 @@ public partial class AddProductPage : ContentPage
                 categoryEntry.Text = "";
                 locationEntry.Text = "";
                 descriptionEntry.Text = "";
+                quantityEntry.Text = "";
                 dateEntry.Text = "";
             }
             await DisplayAlert("Success", "Product added", "Ok");

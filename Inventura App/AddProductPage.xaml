@@ -38,6 +38,13 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Spacing="5">
+                <Label Text="Quantity" FontAttributes="Bold" FontSize="Subtitle"/>
+                <StackLayout>
+                    <Entry x:Name="quantityEntry" Placeholder="Quantity..."/>
+                    <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Spacing="5">
                 <Label Text="Date of purchase" FontAttributes="Bold" FontSize="Subtitle"/>
                 <StackLayout>
                     <Entry x:Name="dateEntry" Placeholder="Date of purchase..."/>

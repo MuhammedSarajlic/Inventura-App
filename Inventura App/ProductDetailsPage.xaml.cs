@@ -13,6 +13,7 @@ public partial class ProductDetailsPage : ContentPage
 		public string Category { get; set; }
 		public string Location { get; set; }
 		public string Description { get; set; }
+		public string Quantity { get; set; }
 		public string Date { get; set; }
 		
 	}
@@ -25,7 +26,8 @@ public partial class ProductDetailsPage : ContentPage
 			Category = ProductItem.SelectedProduct.Category,
 			Location = ProductItem.SelectedProduct.Location,
 			Description = ProductItem.SelectedProduct.Description,
-			Date = ProductItem.SelectedProduct.Date
+			Quantity = ProductItem.SelectedProduct.Quantity.ToString(),
+            Date = ProductItem.SelectedProduct.Date
         };
         this.BindingContext = Item;
 		InitializeComponent();
