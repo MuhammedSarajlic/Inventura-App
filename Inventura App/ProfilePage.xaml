@@ -18,8 +18,14 @@
                             </StackLayout>
                         </Frame>
                         <StackLayout Spacing="10">
-                            <Label x:Name="nameLabel" Text="{Binding Name}" FontSize="Medium" />
-                            <Label x:Name="emailLabel" Text="{Binding Email}" FontSize="Medium" />
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="Name: " FontSize="Medium" FontAttributes="Bold"/>
+                                <Label x:Name="nameLabel" Text="{Binding Name}" FontSize="Medium" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="Email: " FontSize="Medium" FontAttributes="Bold"/>
+                                <Label x:Name="emailLabel" Text="{Binding Email}" FontSize="Medium" LineBreakMode="WordWrap" MaxLines="2"/>
+                            </StackLayout>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
