@@ -43,8 +43,8 @@
                                             <StackLayout Spacing="10" Grid.Column="0">
                                                 <Label Text="{Binding Name}" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
                                                 <HorizontalStackLayout>
-                                                    <Label Text="Category: " TextColor="Black"/>
-                                                    <Label Text="{Binding Category}" />
+                                                    <Label Text="Quantity: " TextColor="Black"/>
+                                                    <Label Text="{Binding Quantity}" />
                                                 </HorizontalStackLayout>
                                             </StackLayout>
                                             <Image Source="next_icon.svg" HeightRequest="40" WidthRequest="40" Grid.Column="1" />
