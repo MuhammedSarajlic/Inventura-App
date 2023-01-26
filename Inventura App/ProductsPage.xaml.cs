@@ -31,6 +31,19 @@ public partial class ProductsPage : ContentPage
 
     }
 
+    private async void OnSearchButtonPressed(object sender, EventArgs e)
+    {
+        var searchText = searchBar.Text;
+        if (string.IsNullOrWhiteSpace(searchText))
+        {
+            return;
+        }
+
+        // Perform the search and update the products list
+        var filteredProducts = Products.Where(p => p.Name.Contains(searchText));
+        productListView.ItemsSource = filteredProducts;
+    }
+
     private void Button_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new AddProductPage());
