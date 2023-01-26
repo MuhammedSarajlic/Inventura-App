@@ -30,4 +30,9 @@ public partial class ProductDetailsPage : ContentPage
         this.BindingContext = Item;
 		InitializeComponent();
     }
+
+	private void Button_Clicked(object sender, EventArgs e)
+	{
+        Navigation.PopAsync();
+    }
 }

@@ -5,7 +5,10 @@
              Title="ProductDetailsPage">
     <ScrollView Padding="30">
         <StackLayout Spacing="25">
-            <Label Text="Product Details" FontSize="Title" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <Button ImageSource="back.png" VerticalOptions="Center" Padding="0,10,5,10" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
+                <Label Text="Product Details" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center"/>
+            </StackLayout>
             <Frame CornerRadius="20">
                 <StackLayout Spacing="20">
                     <Image Source="logosvg.svg" HeightRequest="250" WidthRequest="250"/>

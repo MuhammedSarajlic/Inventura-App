@@ -4,6 +4,10 @@
              x:Class="Inventura_App.ProfilePage"
              Title="ProfilePage">
     <VerticalStackLayout Padding="30">
+        <StackLayout Orientation="Horizontal" Spacing="5" Margin="0,0,0,30">
+            <Button ImageSource="back.png" VerticalOptions="Center" Padding="0,10,5,10" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
+            <Label Text="Profile Page" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center"/>
+        </StackLayout>
         <StackLayout VerticalOptions="Center" Spacing="30">
             <Frame BackgroundColor="White" CornerRadius="15" Padding="20">
                 <StackLayout>

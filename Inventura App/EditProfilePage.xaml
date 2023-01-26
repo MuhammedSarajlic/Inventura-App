@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Inventura_App.EditProfilePage"
              Title="EditProfilePage">
-    <ScrollView>
+    <ScrollView Padding="30">
         
-    <StackLayout Padding="30, 10">
-        <StackLayout Spacing="20">
-            <Label Text="Edit Profile" FontSize="Large" FontAttributes="Bold" Margin="0,20,0,30"/>
+    <StackLayout Spacing="20">
+            <StackLayout Orientation="Horizontal" Spacing="5" Margin="0,0,0,10">
+                <Button ImageSource="back.png" VerticalOptions="Center" Padding="0,10,5,10" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
+                <Label Text="Edit Profile" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center"/>
+            </StackLayout>
             <StackLayout Spacing="10" Margin="0, 0, 0 ,20">
                 <Label Text="Name" FontSize="Medium" VerticalOptions="Center" FontAttributes="Bold"/>
                 <StackLayout>
@@ -25,7 +27,6 @@
             <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,10,0,0">
                 <Button Text="Update" Clicked="Update_Clicked" FontSize="Title" Padding="20, 10"/>
             </StackLayout>
-        </StackLayout>
     </StackLayout>
     </ScrollView>
 

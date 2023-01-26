@@ -25,4 +25,9 @@ public partial class ProfilePage : ContentPage
             }
         });
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
 }
