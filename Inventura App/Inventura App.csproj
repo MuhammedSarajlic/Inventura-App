@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\chart_icon.svg" />
 	  <None Remove="Resources\Images\home_Icon.svg" />
 	  <None Remove="Resources\Images\logosvg.svg" />
