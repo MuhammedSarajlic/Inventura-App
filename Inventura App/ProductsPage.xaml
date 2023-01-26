@@ -20,9 +20,14 @@
                     <Label x:Name="totalProducts" Text="{Binding numberOfProducts}" TextColor="Black" FontSize="Large"/>
                 </StackLayout>
             </HorizontalStackLayout>
-            <StackLayout>
-                <Label Text="Products List" TextColor="Gray"  FontSize="Small"/>
-            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Products List" TextColor="Gray"  FontSize="Small" VerticalOptions="Center" Grid.Column="0" />
+                <SearchBar x:Name="searchBar" SearchButtonPressed="OnSearchButtonPressed" VerticalOptions="Center" WidthRequest="200" Grid.Column="1"  />
+            </Grid>
             <StackLayout>
                 <ListView x:Name="productListView" ItemsSource="{Binding Products}" HasUnevenRows="True" SeparatorVisibility="None">
                     <ListView.ItemTemplate>
