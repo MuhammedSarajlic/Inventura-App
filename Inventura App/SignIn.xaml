@@ -6,7 +6,7 @@
              Title="SignIn">
     <ScrollView>
         <StackLayout Margin="40">
-            <Image Source="logosvg.svg" WidthRequest="180" HeightRequest="180"/>
+            <Image Source="logosvg.svg" WidthRequest="180" HeightRequest="180" Margin="0,0,0,40"/>
             <StackLayout Spacing="20">
                 <StackLayout>
                     <Entry x:Name="EmailEntry" Placeholder="Email"/>
@@ -16,14 +16,16 @@
                     <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True"/>
                     <BoxView Color="#ACACBE" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
-                <Button x:Name="SignInButton" CornerRadius="30" HeightRequest="50" Text="Sign In" FontSize="20" FontAttributes="Bold" Margin="0,20,0,0"/>
-                <HorizontalStackLayout Spacing="5">
-                    <Label Text="Don't have an account? " VerticalTextAlignment="End" TextColor="Gray" FontSize="16"/>
-                    <Label Text="Sign Up" FontSize="16" FontAttributes="Bold" TextColor="{x:StaticResource Primary}" VerticalTextAlignment="End"/>
-                    <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignUp"/>
-                    </HorizontalStackLayout.GestureRecognizers>
-                </HorizontalStackLayout>
+                <StackLayout Spacing="20" Margin="0,70,0,0">
+                    <Button x:Name="SignInButton" CornerRadius="30" HeightRequest="50" Text="Sign In" FontSize="20" FontAttributes="Bold"/>
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Don't have an account? " VerticalTextAlignment="End" TextColor="Gray" FontSize="16"/>
+                        <Label Text="Sign Up" FontSize="16" FontAttributes="Bold" TextColor="{x:StaticResource Primary}" VerticalTextAlignment="End"/>
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignUp"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                    </HorizontalStackLayout>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ScrollView>
